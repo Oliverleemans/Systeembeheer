@@ -7,7 +7,3 @@ Address = 193.191.177.196/25
 Gateway = 193.191.177.254
 DHCP = no
 IPv6AcceptRA = false
-
-[NEIGHBOR]
-Address = 193.191.177.254
-LinkLayerAddress = ca:fe:c0:ff:ee:00
