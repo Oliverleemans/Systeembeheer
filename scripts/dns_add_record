@@ -1,0 +1,15 @@
+#!/bin/bash
+
+while getopts t: flag
+do
+    case "${flag}" in
+        t) choice=${OPTARG}
+            case "$choice" in
+                "A") echo "${3} IN      ${choice}       ${4}" >> "/etc/bind/zones/${5}";;
+                "CNAME") echo "${3} IN      ${choice}       ${4}" >> "/etc/bind/zones/${4}";;
+                "MX") echo "${3} IN      A       ${4}" >> "/etc/bind/zones/${5}" && echo "@ IN  ${choice} ${3}.${5}" >> $5;;
+                *) echo "Error: Invalid choice";;
+            esac;;
+    esac
+done
+systemctl restart bind9
