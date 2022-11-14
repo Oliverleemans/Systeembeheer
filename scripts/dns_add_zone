@@ -1,0 +1,38 @@
+#!/bin/bash
+if [ -z "$1" ]; then
+        echo "Error: Give valid param"
+        exit 1
+fi
+mainZoneFile="/etc/bind/zones/sb.uclllabs.be"
+mrtZones="/etc/bind/named.conf.mrt-zones"
+zoneFileGenerate="/etc/bind/zones/${1}.oliver-leemans.sb.uclllabs.be"
+
+
+sixthLine=($(sed -n '6p' < $mainZoneFile))
+increment=$(($sixthLine + 1))
+# replace string
+sed -i "6s/$sixthLine/$increment/g" $mainZoneFile
+
+template="${1}  IN      NS      ns.oliver-leemans.sb.uclllabs.be."
+echo $template >> $mainZoneFile
+
+echo "zone \"$1.oliver-leemans.sb.uclllabs.be\" {
+        type primary;
+        file \"$zoneFileGenerate\";
+};" >> $mrtZones
+
+echo "\$TTL    300
+@       IN      SOA     ns.${1}.oliver-leemans.sb.uclllabs.be. ${1}.oliver-leemans.sb.uclllabs.be (
+                        2               ; Serial
+                        300             ; Refresh
+                        300             ; Retry
+                        300             ; Expire
+                        300      )      ; Negative Cache TTL
+
+; name servers - A records
+ns      IN      A       193.191.177.196
+
+; name servers - NS records
+@       IN      NS      ns.oliver-leemans.sb.uclllabs.be." > $zoneFileGenerate
+
+systemctl restart bind9 
