@@ -12,4 +12,5 @@ do
             esac;;
     esac
 done
+
 systemctl restart bind9

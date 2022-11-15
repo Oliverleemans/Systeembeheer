@@ -3,7 +3,7 @@ if [ -z "$1" ]; then
         echo "Error: Give valid param"
         exit 1
 fi
-mainZoneFile="/etc/bind/zones/sb.uclllabs.be"
+mainZoneFile="/etc/bind/zones/db.oliver-leemans.sb.uclllabs.be"
 mrtZones="/etc/bind/named.conf.mrt-zones"
 zoneFileGenerate="/etc/bind/zones/${1}.oliver-leemans.sb.uclllabs.be"
 
