@@ -12,5 +12,17 @@ do
             esac;;
     esac
 done
+if [ "$choice" = "CNAME" ];
+then
+	FILE=/etc/bind/zones/$4
+
+else
+	FILE=/etc/bind/zones/$5
+fi
+
+sixthLine=($(sed -n '3p' < $FILE))
+increment=$(($sixthLine + 1))
+# replace string
+sed -i "3s/$sixthLine/$increment/g" $FILE
 
 systemctl restart bind9
