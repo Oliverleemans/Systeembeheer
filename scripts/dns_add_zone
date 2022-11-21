@@ -8,10 +8,10 @@ mrtZones="/etc/bind/named.conf.mrt-zones"
 zoneFileGenerate="/etc/bind/zones/${1}.oliver-leemans.sb.uclllabs.be"
 
 
-sixthLine=($(sed -n '6p' < $mainZoneFile))
+sixthLine=($(sed -n '7p' < $mainZoneFile))
 increment=$(($sixthLine + 1))
 # replace string
-sed -i "6s/$sixthLine/$increment/g" $mainZoneFile
+sed -i "7s/$sixthLine/$increment/g" $mainZoneFile
 
 template="${1}  IN      NS      ns.oliver-leemans.sb.uclllabs.be."
 echo $template >> $mainZoneFile
