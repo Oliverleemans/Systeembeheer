@@ -3,12 +3,12 @@
 ;
 $ORIGIN oliver-leemans.sb.uclllabs.be.
 $TTL    300
-       IN      SOA     ns.oliver-leemans.sb.uclllabs.be. root.oliver-leemans.sb.uclllabs.be. (
-                        145               ; Serial
-                        300               ; Refresh
-                        300               ; Retry
-                        300               ; Expire
-                        300  )            ; Negative Cache TTL
+@       IN      SOA     ns.oliver-leemans.sb.uclllabs.be. root.oliver-leemans.sb.uclllabs.be. (
+                        147                 ; Serial
+                        604800            ; Refresh
+                        86400             ; Retry
+                        241920            ; Expire
+                        604800  )         ; Negative Cache TTL
 
 ; name servers - A records
 @       IN      A       193.191.177.196
