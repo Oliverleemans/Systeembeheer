@@ -4,7 +4,7 @@
 $ORIGIN oliver-leemans.sb.uclllabs.be.
 $TTL    300
 @ IN SOA  ns.oliver-leemans.sb.uclllabs.be. root.oliver-leemans.sb.uclllabs.be. (
-                        172                 ; Serial
+                        174                 ; Serial
                         604800            ; Refresh
                         86400             ; Retry
                         241920            ; Expire
@@ -18,6 +18,12 @@ www2    IN      A       193.191.177.196
 test    IN      A       193.191.177.254
 ns      IN      A       193.191.177.196
 
+; name servers - AAAA records
+@               IN      AAAA    2001:6a8:2880:a077::C4
+www             IN      AAAA    2001:6a8:2880:a077::C4
+ns              IN      AAAA    2001:6a8:2880:a077::C4
+www1            IN      AAAA    2001:6a8:2880:a077::C4
+www2            IN      AAAA    2001:6a8:2880:a077::C4
 ; name servers - NS records
 @       IN      NS      ns.oliver-leemans.sb.uclllabs.be.
 @       IN      NS      ns1.uclllabs.be.
@@ -52,3 +58,5 @@ subzoneaiqu8a IN NS ns.oliver-leemans.sb.uclllabs.be.
 subzonepoo6um IN NS ns.oliver-leemans.sb.uclllabs.be.
 subzoneiel0qu IN NS ns.oliver-leemans.sb.uclllabs.be.
 subzoneahp4oo IN NS ns.oliver-leemans.sb.uclllabs.be.
+subzonerai8fo IN NS ns.oliver-leemans.sb.uclllabs.be.
+subzoneueyei7 IN NS ns.oliver-leemans.sb.uclllabs.be.
