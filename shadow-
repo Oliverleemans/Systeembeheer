@@ -29,3 +29,4 @@ tcpdump:*:19106:0:99999:7:::
 check:$y$j9T$PY84OkQKsGlVAYai8KlZt0$CMlgevwSf91BMvLNFPs7mMzqSrQl60tfQZY4br7h7/.:19282:0:99999:7:::
 ntp:*:19281:0:99999:7:::
 bind:*:19310:0:99999:7:::
+ftp:*:19318:0:99999:7:::

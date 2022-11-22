@@ -58,3 +58,4 @@ check:x:1000:
 ntp:x:118:
 incron:x:119:
 bind:x:120:
+wireshark:x:121:
