@@ -1,0 +1,28 @@
+#!/bin/bash
+if [ "$EUID" -ne 0 ]; then
+        echo "Please run this script as root user"
+        exit 1
+fi
+[ -z "${1}" ] && echo "Error: Parameter is empty"
+
+if ! dig "${1}" | grep -q ";; ANSWER SECTION:"; then
+    echo "Error: Domain does not exist"
+    exit 0
+fi
+
+#-----------------------Make vhost folder-----------------------
+mkdir -p /var/www/html/$1
+echo "welcome ${1}" > /var/www/html/$1/index.html
+#-----------------------End vhost folder------------------------
+
+#------------------------Add vhost------------------------
+echo "<VirtualHost *:80>
+        ServerName oliver-leemans.sb.uclllabs.be
+        ServerAlias ${1}
+        DocumentRoot /var/www/html/${1}
+
+        ErrorLog \${APACHE_LOG_DIR}/${1}.log
+</VirtualHost>" >> /etc/apache2/sites-available/$1.conf
+#------------------------End vhost------------------------
+a2ensite $1.conf
+systemctl restart apache2
