@@ -17,6 +17,7 @@ www1    IN      A       193.191.177.196
 www2    IN      A       193.191.177.196
 test    IN      A       193.191.177.254
 ns      IN      A       193.191.177.196
+mx      IN      A       193.191.177.196
 
 ; name servers - AAAA records
 @               IN      AAAA    2001:6a8:2880:a077::C4
@@ -24,6 +25,7 @@ www             IN      AAAA    2001:6a8:2880:a077::C4
 ns              IN      AAAA    2001:6a8:2880:a077::C4
 www1            IN      AAAA    2001:6a8:2880:a077::C4
 www2            IN      AAAA    2001:6a8:2880:a077::C4
+mx              IN      AAAA    2001:6a8:2880:a077::C4
 ; name servers - NS records
 @       IN      NS      ns.oliver-leemans.sb.uclllabs.be.
 @       IN      NS      ns1.uclllabs.be.
