@@ -3,8 +3,8 @@
 ;
 $ORIGIN oliver-leemans.sb.uclllabs.be.
 $TTL    300
-@ IN SOA  oliver-leemans.sb.uclllabs.be. root.oliver-leemans.sb.uclllabs.be. (
-                        203                 ; Serial
+@ IN SOA  ns.oliver-leemans.sb.uclllabs.be. root.oliver-leemans.sb.uclllabs.be. (
+                        211                 ; Serial
                         604800            ; Refresh
                         86400             ; Retry
                         241920            ; Expire
@@ -28,9 +28,9 @@ www1            IN      AAAA    2001:6a8:2880:a077::C4
 www2            IN      AAAA    2001:6a8:2880:a077::C4
 mx              IN      AAAA    2001:6a8:2880:a077::C4
 
-_acme-challenge	IN	TXT	8sgPmze-lEqNn_JIQjReFgviEvwv6elxQVkg0aMOjY0
-_acme-challenge.secure	IN	TXT	yLOSsqhkNC8IrTUI1qf4aXmusbTefWhIBVh4k_RFlPw
-_acme-challenge.supersecure	IN	TXT	1N_jEOEmIUjqHx61CVjM7T4rZ8J7E4vbPXfMv9FR8Mg
+#_acme-challenge	IN	TXT	1Xd9twP0keRcFAbKfU5aguuo-Dn12Z3AdqL9XrrXqsk
+#_acme-challenge.secure	IN	TXT	SxF8tbU12bojjSyholjV9SPtn55mUsOu49Gfz_bq7W0
+#_acme-challenge.supersecure	IN	TXT	4iNxDbUzpttD881GDqBmUbr9IeRqU077RJFT_aKNveI
 
 
 ; name servers - NS records
@@ -95,3 +95,4 @@ subzonething7 IN NS ns.oliver-leemans.sb.uclllabs.be.
 subzonetah7ai IN NS ns.oliver-leemans.sb.uclllabs.be.
 subzonemei6qu IN NS ns.oliver-leemans.sb.uclllabs.be.
 subzoneoodei9 IN NS ns.oliver-leemans.sb.uclllabs.be.
+subzoneoonu3o IN NS ns.oliver-leemans.sb.uclllabs.be.
