@@ -31,7 +31,7 @@ echo "\$TTL    300
 
 ; name servers - A records
 ns      IN      A       193.191.177.196
-
+@       IN      A       193.191.177.196
 ; name servers - NS records
 @       IN      NS      ns.oliver-leemans.sb.uclllabs.be." > $zoneFileGenerate
 

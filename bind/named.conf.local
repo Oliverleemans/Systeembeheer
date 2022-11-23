@@ -12,3 +12,5 @@ zone "oliver-leemans.sb.uclllabs.be" {
     file "/etc/bind/zones/db.oliver-leemans.sb.uclllabs.be"; # zone file path
     allow-transfer { 193.191.177.254; 193.191.177.4; 193.191.176.254; 193.191.177.196;};
 };
+
+include "/etc/bind/named.conf.mrt-zones";

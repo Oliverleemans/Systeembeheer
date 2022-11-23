@@ -3,7 +3,10 @@ if [ "$EUID" -ne 0 ]; then
         echo "Please run this script as root user"
         exit 1
 fi
-[ -z "${1}" ] && echo "Error: Parameter is empty"
+if [ -z "${1}" ] ; then
+        echo "Error: Parameter is empty"
+        exit 1
+fi
 
 if ! dig "${1}" | grep -q ";; ANSWER SECTION:"; then
     echo "Error: Domain does not exist"
