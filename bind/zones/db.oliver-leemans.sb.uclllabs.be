@@ -26,6 +26,12 @@ ns              IN      AAAA    2001:6a8:2880:a077::C4
 www1            IN      AAAA    2001:6a8:2880:a077::C4
 www2            IN      AAAA    2001:6a8:2880:a077::C4
 mx              IN      AAAA    2001:6a8:2880:a077::C4
+
+_acme-challenge	IN	TXT	8sgPmze-lEqNn_JIQjReFgviEvwv6elxQVkg0aMOjY0
+_acme-challenge.secure	IN	TXT	yLOSsqhkNC8IrTUI1qf4aXmusbTefWhIBVh4k_RFlPw
+_acme-challenge.supersecure	IN	TXT	1N_jEOEmIUjqHx61CVjM7T4rZ8J7E4vbPXfMv9FR8Mg
+
+
 ; name servers - NS records
 @       IN      NS      ns.oliver-leemans.sb.uclllabs.be.
 @       IN      NS      ns1.uclllabs.be.
