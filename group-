@@ -59,3 +59,4 @@ ntp:x:118:
 incron:x:119:
 bind:x:120:
 wireshark:x:121:
+ftp:x:122:
