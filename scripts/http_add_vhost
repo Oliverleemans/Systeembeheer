@@ -20,7 +20,7 @@ echo "welcome ${1}" > /var/www/html/$1/index.html
 
 #------------------------Add vhost------------------------
 echo "<VirtualHost *:80>
-        ServerName oliver-leemans.sb.uclllabs.be
+        ServerName ${1}
         ServerAlias ${1}
         DocumentRoot /var/www/html/${1}
 
