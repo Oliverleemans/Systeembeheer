@@ -29,7 +29,7 @@ irc:x:39:
 src:x:40:
 gnats:x:41:
 shadow:x:42:
-utmp:x:43:
+utmp:x:43:telnetd
 video:x:44:
 sasl:x:45:
 plugdev:x:46:
@@ -60,3 +60,5 @@ incron:x:119:
 bind:x:120:
 wireshark:x:121:
 ftp:x:122:
+mystery1_2014:x:1001:
+telnetd:x:123:

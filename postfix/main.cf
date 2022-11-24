@@ -1,5 +1,5 @@
 # See /usr/share/postfix/main.cf.dist for a commented, more complete version
-
+myhostname = mx.oliver-leemans.sb.uclllabs.be
 smtpd_banner = $myhostname ESMTP $mail_name (Debian/GNU)
 biff = no
 
@@ -11,18 +11,20 @@ append_dot_mydomain = no
 
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
-mydestination = mx.oliver-leemans.sb.uclllabs.be, oliver-leemans.localdomain,localhost.localdomain, localhost
-relayhost = 
-mynetworks = 127.0.0.0/8
+mydestination = mx.oliver-leemans.sb.uclllabs.be
+relayhost = oliver-leemans.sb.uclllabs.be
+mynetworks = 193.191.177.196,193.191.177.6, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
 inet_interfaces = all
 recipient_delimiter = +
+smtpd_sender_restrictions = permit_mynetworks, check_sender_access hash:/etc/postfix/sender_access, reject
 
 compatibility_level = 2
 
 myorigin = /etc/mailname
 mailbox_size_limit = 0
 inet_protocols = all
-
-virtual transport = lmtp:unix:private/dovecot-lmtp
+virtual_transport = lmtp:unix:private/dovecot-lmtp
 virtual_mailbox_domains = oliver-leemans.sb.uclllabs.be
+minimal_backoff_time=300s
+maximal_backoff_time=4000s
 

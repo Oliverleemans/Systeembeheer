@@ -1,0 +1,3 @@
+user1@oliver-leemans.sb.uclllabs.be permit_auth_destination
+user2@oliver-leemans.sb.uclllabs.be permit_auth_destination
+check@oliver-leemans.sb.uclllabs.be permit_auth_destination
